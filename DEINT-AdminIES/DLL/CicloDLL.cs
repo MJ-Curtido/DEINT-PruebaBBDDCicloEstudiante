@@ -28,5 +28,15 @@ namespace DEINT_AdminIES.DLL
 
             return conexion.EjecutarSentencia(sentencia);
         }
+
+        public Boolean Eliminar(String id)
+        {
+            return conexion.EjecutarComandoSinRetorno($"DELETE FROM CICLO WHERE ID = {id};");
+        }
+
+        internal Boolean Modificar(string id, string nombreCiclo)
+        {
+            return conexion.EjecutarComandoSinRetorno($"UPDATE CICLO SET NOMBRE = '{nombreCiclo}' FROM CICLO WHERE ID = {id};");
+        }
     }
 }

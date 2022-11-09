@@ -30,8 +30,8 @@
         {
             this.imgEstudiante = new System.Windows.Forms.PictureBox();
             this.btnExaminar = new System.Windows.Forms.Button();
-            this.tb2Ape = new System.Windows.Forms.TextBox();
-            this.tb1Ape = new System.Windows.Forms.TextBox();
+            this.tbApe2 = new System.Windows.Forms.TextBox();
+            this.tbApe1 = new System.Windows.Forms.TextBox();
             this.lbl2Ape = new System.Windows.Forms.Label();
             this.lbl1Ape = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
@@ -42,7 +42,7 @@
             this.lblCorreo = new System.Windows.Forms.Label();
             this.tbCiclo = new System.Windows.Forms.TextBox();
             this.lblCiclo = new System.Windows.Forms.Label();
-            this.btnApagar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@
             this.imgEstudiante.Location = new System.Drawing.Point(13, 13);
             this.imgEstudiante.Name = "imgEstudiante";
             this.imgEstudiante.Size = new System.Drawing.Size(197, 230);
+            this.imgEstudiante.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgEstudiante.TabIndex = 0;
             this.imgEstudiante.TabStop = false;
             // 
@@ -67,20 +68,21 @@
             this.btnExaminar.TabIndex = 1;
             this.btnExaminar.Text = "Examinar";
             this.btnExaminar.UseVisualStyleBackColor = true;
+            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
             // 
-            // tb2Ape
+            // tbApe2
             // 
-            this.tb2Ape.Location = new System.Drawing.Point(510, 94);
-            this.tb2Ape.Name = "tb2Ape";
-            this.tb2Ape.Size = new System.Drawing.Size(240, 20);
-            this.tb2Ape.TabIndex = 9;
+            this.tbApe2.Location = new System.Drawing.Point(510, 94);
+            this.tbApe2.Name = "tbApe2";
+            this.tbApe2.Size = new System.Drawing.Size(240, 20);
+            this.tbApe2.TabIndex = 9;
             // 
-            // tb1Ape
+            // tbApe1
             // 
-            this.tb1Ape.Location = new System.Drawing.Point(253, 94);
-            this.tb1Ape.Name = "tb1Ape";
-            this.tb1Ape.Size = new System.Drawing.Size(240, 20);
-            this.tb1Ape.TabIndex = 8;
+            this.tbApe1.Location = new System.Drawing.Point(253, 94);
+            this.tbApe1.Name = "tbApe1";
+            this.tbApe1.Size = new System.Drawing.Size(240, 20);
+            this.tbApe1.TabIndex = 8;
             // 
             // lbl2Ape
             // 
@@ -164,14 +166,15 @@
             this.lblCiclo.TabIndex = 14;
             this.lblCiclo.Text = "Ciclo";
             // 
-            // btnApagar
+            // btnAgregar
             // 
-            this.btnApagar.Location = new System.Drawing.Point(253, 273);
-            this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(75, 23);
-            this.btnApagar.TabIndex = 21;
-            this.btnApagar.Text = "Apagar";
-            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Location = new System.Drawing.Point(253, 273);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 21;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
@@ -217,7 +220,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnApagar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.tbCorreo);
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.tbCiclo);
@@ -226,8 +229,8 @@
             this.Controls.Add(this.tbClave);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblClave);
-            this.Controls.Add(this.tb2Ape);
-            this.Controls.Add(this.tb1Ape);
+            this.Controls.Add(this.tbApe2);
+            this.Controls.Add(this.tbApe1);
             this.Controls.Add(this.lbl2Ape);
             this.Controls.Add(this.lbl1Ape);
             this.Controls.Add(this.btnExaminar);
@@ -245,8 +248,8 @@
 
         private System.Windows.Forms.PictureBox imgEstudiante;
         private System.Windows.Forms.Button btnExaminar;
-        private System.Windows.Forms.TextBox tb2Ape;
-        private System.Windows.Forms.TextBox tb1Ape;
+        private System.Windows.Forms.TextBox tbApe2;
+        private System.Windows.Forms.TextBox tbApe1;
         private System.Windows.Forms.Label lbl2Ape;
         private System.Windows.Forms.Label lbl1Ape;
         private System.Windows.Forms.TextBox tbNombre;
@@ -257,7 +260,7 @@
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.TextBox tbCiclo;
         private System.Windows.Forms.Label lblCiclo;
-        private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnCancelar;
