@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DEINT_AdminIES.DLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,10 +15,21 @@ namespace DEINT_AdminIES
     public partial class FormEstudiantes : Form
     {
         private byte[] imgaenByte;
+        private EstudianteDLL estudiante;
 
         public FormEstudiantes()
         {
             InitializeComponent();
+
+            estudiante = new EstudianteDLL();
+
+            DataSet ds = estudiante.MostrarCiclos();
+
+            cbCiclos.ValueMember = "ID";
+            cbCiclos.DisplayMember = "NOMBRE";
+            cbCiclos.DataSource = ds.Tables[0];
+
+            cbCiclos.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnExaminar_Click(object sender, EventArgs e)
@@ -38,9 +50,16 @@ namespace DEINT_AdminIES
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (tbNombre.Text.Equals("") || tbApe1.Text.Equals("") || tbApe2.Text.Equals("") || tbCiclo.Text.Equals("") || tbCorreo.Text.Equals("") || imgaenByte == null)
+            if (tbNombre.Text.Equals("") || tbApe1.Text.Equals("") || tbApe2.Text.Equals("") || tbCorreo.Text.Equals("") || imgaenByte == null)
             {
-
+                MessageBox.Show("Debe introducir todos los campos.");
+            }
+            else
+            {
+                if (estudiante.Agregar(tbNombre.Text, tbApe1.Text, tbApe2.Text, tbCorreo.Text, imgaenByte, cbCiclos.Text))
+                {
+                    
+                }
             }
         }
     }

@@ -37,16 +37,16 @@
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.tbClave = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblClave = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.tbCorreo = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
-            this.tbCiclo = new System.Windows.Forms.TextBox();
             this.lblCiclo = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.gridView = new System.Windows.Forms.DataGridView();
+            this.cbCiclos = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgEstudiante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +111,7 @@
             // 
             // tbClave
             // 
+            this.tbClave.Enabled = false;
             this.tbClave.Location = new System.Drawing.Point(253, 29);
             this.tbClave.Name = "tbClave";
             this.tbClave.Size = new System.Drawing.Size(183, 20);
@@ -125,14 +126,14 @@
             this.lblNombre.TabIndex = 11;
             this.lblNombre.Text = "Nombre";
             // 
-            // lblClave
+            // lblId
             // 
-            this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(250, 13);
-            this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(34, 13);
-            this.lblClave.TabIndex = 10;
-            this.lblClave.Text = "Clave";
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(250, 13);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(18, 13);
+            this.lblId.TabIndex = 10;
+            this.lblId.Text = "ID";
             // 
             // tbCorreo
             // 
@@ -149,13 +150,6 @@
             this.lblCorreo.Size = new System.Drawing.Size(38, 13);
             this.lblCorreo.TabIndex = 18;
             this.lblCorreo.Text = "Correo";
-            // 
-            // tbCiclo
-            // 
-            this.tbCiclo.Location = new System.Drawing.Point(253, 223);
-            this.tbCiclo.Name = "tbCiclo";
-            this.tbCiclo.Size = new System.Drawing.Size(497, 20);
-            this.tbCiclo.TabIndex = 16;
             // 
             // lblCiclo
             // 
@@ -211,11 +205,20 @@
             this.gridView.Size = new System.Drawing.Size(737, 127);
             this.gridView.TabIndex = 26;
             // 
+            // cbCiclos
+            // 
+            this.cbCiclos.FormattingEnabled = true;
+            this.cbCiclos.Location = new System.Drawing.Point(253, 223);
+            this.cbCiclos.Name = "cbCiclos";
+            this.cbCiclos.Size = new System.Drawing.Size(497, 21);
+            this.cbCiclos.TabIndex = 28;
+            // 
             // FormEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbCiclos);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnBorrar);
@@ -223,12 +226,11 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.tbCorreo);
             this.Controls.Add(this.lblCorreo);
-            this.Controls.Add(this.tbCiclo);
             this.Controls.Add(this.lblCiclo);
             this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.tbClave);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblClave);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.tbApe2);
             this.Controls.Add(this.tbApe1);
             this.Controls.Add(this.lbl2Ape);
@@ -255,15 +257,15 @@
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.TextBox tbClave;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblClave;
+        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.TextBox tbCorreo;
         private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.TextBox tbCiclo;
         private System.Windows.Forms.Label lblCiclo;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridView gridView;
+        private System.Windows.Forms.ComboBox cbCiclos;
     }
 }
