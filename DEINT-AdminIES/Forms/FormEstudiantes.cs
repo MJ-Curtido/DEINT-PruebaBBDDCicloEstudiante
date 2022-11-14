@@ -58,9 +58,18 @@ namespace DEINT_AdminIES
             {
                 if (estudiante.Agregar(tbNombre.Text, tbApe1.Text, tbApe2.Text, tbCorreo.Text, imgaenByte, cbCiclos.Text))
                 {
-                    
+                    MessageBox.Show("Estudiante agregado correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido agregar el estudiante.");
                 }
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace DEINT_AdminIES.DLL
         {
             conexion.EjecutarComandoSinRetorno($"INSERT INTO ESTUDIANTE(NOMBRE, APELLIDO1, APELLIDO2, EMAIL, FOTO) VALUES('{nombreEstudiante}', '{apellido1}', '{apellido2}', '{email}', '{foto}');");
 
-            return conexion.EjecutarComandoSinRetorno($"INSERT INTO ALUMNO_CICLO(ID_ESTUDIANTE, ID_CICLO) VALUES(SELECT ID FROM ESTUDIANTE WHERE NOMBRE = '{nombreEstudiante}', SELECT ID FROM CICLO WHERE NOMBRE = '{nombreCiclo}');");
+            return conexion.EjecutarComandoSinRetorno($"INSERT INTO ALUMNO_CICLO(ID_ESTUDIANTE, ID_CICLO) VALUES(SELECT ID FROM ESTUDIANTE WHERE EMAIL = '{email}', SELECT ID FROM CICLO WHERE NOMBRE = '{nombreCiclo}');");
         }
 
         public DataSet MostrarCiclos()
